@@ -5,7 +5,7 @@ import { GridLayout, GridLayoutItem } from '@progress/kendo-react-layout';
 export const OptionSelection = ({ currentStep, formData, handleOptionChange, reset }) => {
     return (
         <GridLayout
-            className=''
+            className='grid'
             style={{ margin: '20px' }}
             // align={{ horizontal: 'center', }}
             cols={[{ width: "50%" }, { width: "auto" }]}

@@ -6,7 +6,7 @@ import Admin from './Modules/Admin';
 import Agent from './Modules/Agent';
 
 function ProcessTreeRenewalsDashboard() {
-    const [showAgent, setShowAgent] = useState(false);
+    const [showAgent, setShowAgent] = useState(true);
 
     return (
         <>

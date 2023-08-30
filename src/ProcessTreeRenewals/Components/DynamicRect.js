@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Stage, Layer, Rect, Line, Text, Group } from 'react-konva';
-import './TranferencesHelper.css';
 
 class DynamicRect extends Component {
   constructor(props) {
@@ -112,17 +111,20 @@ class DynamicRect extends Component {
   };
 
   handleClickAddOption = () => {
+    console.log("handleClickAddOption")
     if (this.state.options == undefined) {
       this.setState({
         options: [this.getSampleOption()],
+      }, () => {
+        this.props.addOption(this.state);
       });
     } else {
       this.setState({
         options: [...this.state.options, this.getSampleOption()],
+      }, () => {
+        this.props.addOption(this.state);
       });
     }
-
-    this.props.addOption(this.state);
   };
 
   handleClickRemoveCard = () => {
@@ -157,6 +159,7 @@ class DynamicRect extends Component {
           shadowOffsetY={this.state.isDragging ? 10 : 5}
           onClick={() => {
             this.optionLineAdd(this.state, 'card');
+            this.handleClickEdit(this.state);
           }}
           onDragStart={() => {
             this.setState(
@@ -256,6 +259,7 @@ class DynamicRect extends Component {
           </Group>
 
           {/* OPCIONES */}
+
           {this.state.options != undefined && this.state.options.length != 0 ? (
             <Group x={0} y={80}>
               <Rect
@@ -276,57 +280,57 @@ class DynamicRect extends Component {
               />
               {this.state.options != undefined
                 ? this.state.options.map((key, index) => {
-                    return (
-                      <Group
-                        x={key.x.local}
-                        y={20 + 20 * index}
+                  return (
+                    <Group
+                      x={key.x.local}
+                      y={20 + 20 * index}
+                      height={20}
+                      key={'Group' + key.key}
+                    >
+                      <Text
+                        x={0}
+                        y={0}
+                        width={20}
                         height={20}
-                        key={'Group' + key.key}
-                      >
-                        <Text
-                          x={0}
-                          y={0}
-                          width={20}
-                          height={20}
-                          key={key.key + 'point'}
-                          text={'🔌'}
-                          fontSize={14}
-                          fontFamily="Calibri"
-                          onClick={() => this.optionLineAdd(key, 'option')}
-                        />
-                        <Text
-                          x={20}
-                          y={0}
-                          width={20}
-                          height={20}
-                          key={key.key + 'edit'}
-                          text={'✍'}
-                          fontSize={14}
-                          fontFamily="Calibri"
-                          onClick={() => this.editOption(key)}
-                        />
-                        <Text
-                          x={40}
-                          y={0}
-                          width={20}
-                          height={20}
-                          key={key.key + 'remove'}
-                          text={'❌'}
-                          fontSize={14}
-                          fontFamily="Calibri"
-                          onClick={() => this.removeOption(key)}
-                        />
-                        <Text
-                          x={60}
-                          y={0}
-                          key={key.key}
-                          text={key.name}
-                          fontSize={14}
-                          fontFamily="Calibri"
-                        />
-                      </Group>
-                    );
-                  })
+                        key={key.key + 'point'}
+                        text={'🔌'}
+                        fontSize={14}
+                        fontFamily="Calibri"
+                        onClick={() => this.optionLineAdd(key, 'option')}
+                      />
+                      <Text
+                        x={20}
+                        y={0}
+                        width={20}
+                        height={20}
+                        key={key.key + 'edit'}
+                        text={'✍'}
+                        fontSize={14}
+                        fontFamily="Calibri"
+                        onClick={() => this.editOption(key)}
+                      />
+                      <Text
+                        x={40}
+                        y={0}
+                        width={20}
+                        height={20}
+                        key={key.key + 'remove'}
+                        text={'❌'}
+                        fontSize={14}
+                        fontFamily="Calibri"
+                        onClick={() => this.removeOption(key)}
+                      />
+                      <Text
+                        x={60}
+                        y={0}
+                        key={key.key}
+                        text={key.name}
+                        fontSize={14}
+                        fontFamily="Calibri"
+                      />
+                    </Group>
+                  );
+                })
                 : null}
             </Group>
           ) : (
@@ -347,4 +351,4 @@ class DynamicRect extends Component {
   }
 }
 
-export { DynamicRect };
+export default DynamicRect;

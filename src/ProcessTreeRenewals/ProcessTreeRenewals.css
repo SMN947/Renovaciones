@@ -1,0 +1,322 @@
+.full {
+	width: 100%;
+	float: left;
+	height: 100vh;
+	box-sizing: border-box;
+	border-right: 1px solid #ccc;
+}
+
+/* center a div horizontall and vertical */
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.edit {
+	/* fixed at center of screen */
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: auto;
+	margin-top: -100px;
+	margin-left: -200px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	background: #fff;
+	padding: 10px;
+	z-index: 1;
+}
+
+.edit input,
+.editCard input {
+	border: #0077c2 solid 1px;
+	border-radius: 5px;
+	width: 100%;
+	height: 30px;
+	margin: 5px 0;
+	box-sizing: border-box;
+}
+
+.edit h4,
+.editCard h4 {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5rem;
+}
+
+.edit .close,
+.editCard .close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 1.5rem;
+	cursor: pointer;
+	border: solid black 1px;
+	width: 20px;
+	height: 20px;
+	font-size: 14;
+	text-align: center;
+	line-height: 20px;
+	background: red;
+	color: white;
+}
+
+.formBody {
+	margin: auto;
+	width: 90%;
+	box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2);
+	padding: 20px 10px 20px 10px;
+}
+
+.formBody>div {
+	padding: 5px;
+}
+
+/* Breadcrumb container */
+.breadcrumb-container {
+	display: flex;
+	align-items: center;
+	margin: 20px 0;
+}
+
+/* Breadcrumb item */
+.breadcrumb-item {
+	margin-right: 10px;
+	color: #2d2d2d;
+	text-decoration: none;
+	transition: color 0.2s ease-in-out;
+}
+
+/* Breadcrumb item hover */
+.breadcrumb-item:hover {
+	color: #0077c2;
+}
+
+/* Last breadcrumb item */
+.breadcrumb-item:last-child {
+	color: #0077c2;
+	font-weight: bold;
+}
+
+/* Separator */
+.breadcrumb-separator {
+	margin: 0 10px;
+	color: #999;
+}
+
+/* Separator icon */
+.breadcrumb-separator::before {
+	content: '\2192';
+	/* Right arrow symbol */
+}
+
+/* Breadcrumb item active */
+.breadcrumb-item.active {
+	color: #0077c2;
+	font-weight: bold;
+}
+
+.title {
+	color: black;
+}
+
+.renewals-optionLabel {
+	width: 100%;
+	font-weight: bold;
+	display: inline-block;
+	cursor: pointer;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin: -8px;
+}
+
+.renewals-OptionElement input {
+	display: none;
+}
+
+.renewals-OptionElement {
+	margin: 5px;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+textarea {
+	width: 100%;
+	height: 50px;
+}
+
+
+.Tools {
+	display: inline;
+}
+
+.inline-checkbox {
+	display: inline-block;
+	margin-right: 10px;
+	width: 45%;
+	margin: auto;
+	/* border: solid rgb(28, 89, 188) 1px; */
+	/* border-radius: 10px; */
+}
+
+.inline-checkbox label {
+	display: inline-block;
+	cursor: pointer;
+	padding-left: 25px;
+	position: relative;
+}
+
+.inline-checkbox input[type='checkbox']:checked+label:before {
+	background-color: #0077c2;
+}
+
+.inline-checkbox-group {
+	/* border: solid red 1px; */
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 400px;
+	margin: auto;
+}
+
+.scaleSlicer {
+	position: fixed;
+	z-index: 99999999999;
+	bottom: 50px;
+	left: -40px;
+	rotate: -90deg;
+	width: 150px;
+}
+
+input[type='range'] {
+	-webkit-appearance: none;
+	margin: 18px 0;
+	width: 100%;
+	border: solid 1px #00244c;
+	width: 100%;
+}
+
+.canvasContainer {
+	border: solid red 1px;
+}
+
+.editorContainer {
+	border: solid purple 1px;
+}
+
+.btnSwitch {
+	z-index: 99999999999;
+	position: fixed !important;
+	display: inline-block;
+	rotate: -90deg;
+	width: 150px;
+	right: -60px;
+	bottom: 50%;
+}
+
+.kendoCanvasContainer {
+	/* border: solid greenyellow 1px; */
+}
+
+.showHideControl {
+	/* border: solid red 1px; */
+	width: 180px;
+	position: relative;
+	top: 90;
+	rotate: -90deg;
+	left: -110px;
+}
+
+.editorFormContainer {
+	position: relative;
+	/* border: solid red 1px; */
+	top: -37px;
+}
+
+.editCard {
+	height: calc(100vh - 80px);
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	background: #fff;
+	z-index: 1;
+	overflow-y: scroll;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.showEditorButton {
+	z-index: 99999999999;
+	position: relative !important;
+	display: inline-block;
+	rotate: -90deg;
+	width: 180px;
+	right: 110px;
+	top: 70px;
+}
+
+.showEditorButtonHidden {
+	z-index: 99999999999;
+	position: fixed !important;
+	rotate: -90deg;
+	width: 180px;
+	right: -70px;
+	top: 80px;
+}
+
+.fieldset-agent-renewals {
+	border: solid red 1px;
+	width: 100%;
+}
+
+.neutralize-css {
+	all: unset;
+}
+
+.neutralize-css>* {
+	all: unset;
+}
+
+.renewals-tree-title {
+	font-size: 1.5rem;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.renewals-tree-subtitle {
+	font-size: 1.2rem;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.renewals-tree-card-title {
+	font-size: 1.3rem;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.renewals-tree-card-container {
+	grid-template-columns: repeat(10, 10%);
+}
+
+.generalCase>* {
+	border: solid red 1px;
+}
+
+.testClass {
+	border: solid #ff1aff 3px;
+}

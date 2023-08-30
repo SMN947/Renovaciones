@@ -1,0 +1,31 @@
+textarea {
+    width: 100%;
+    height: 100px;
+}
+
+input,
+button {
+    width: 100%;
+    padding: 8px;
+}
+
+.centered {
+    /* border: solid rgb(200, 200, 200) 1px; */
+    width: 100%;
+    padding: 6px;
+}
+
+.detalles {
+    height: 300px;
+}
+
+.labelInputCustom {
+    background: white;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.AlertText input {
+    color: red !important;
+    text-align: center !important;
+}

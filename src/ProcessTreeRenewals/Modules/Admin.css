@@ -1,0 +1,57 @@
+/* =============== ADMIN ===============displa */
+.admin-renewals-box {
+    box-sizing: border-box;
+    border: 1px solid #00244c;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.admin-renewal-splitter {
+    width: 100%;
+    height: calc(100vh - 70px);
+}
+
+.admin-renewal-split-svg {
+    border-right: solid 1px #00244c;
+    overflow: hidden;
+    height: 100%;
+}
+
+.admin-renewal-split-editor {
+    border-left: solid 1px #00244c;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.admin-svg {
+    border: solid purple 1px;
+}
+
+.admin-renewal-split-svg-wrapper {
+    padding: 500px;
+    padding: 10px;
+    position: relative;
+    height: 500vh;
+    width: 500vw;
+
+}
+
+.admin-renewal-controls {
+    position: relative;
+    bottom: 20px;
+    right: 20px;
+}
+
+.admin-renewals-noediting {
+    height: calc(100vh - 80px);
+}
+
+.admin-renewals-splitter {
+    border: solid red 10px
+}
+
+.admin-renewals-splitter .k-splitbar,
+.admin-renewals-splitter .k-splitbar:focus {
+    background: #00244c !important;
+}

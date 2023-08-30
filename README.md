@@ -1,3 +1,1 @@
-# React-Wizard-Form
-
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-wnuuqu)
+v 0.0.1
